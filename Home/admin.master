@@ -1,0 +1,157 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="Home_Home" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>Hanoz HRM</title>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="css/styles1.css">
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="js/script1.js"></script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary JavaScript plugins) -->
+<script type='text/javascript' src="js/jquery-1.11.1.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<!-- start menu -->
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script>$(document).ready(function () { $(".megamenu").megamenu(); });</script>
+<!-- start slider -->
+<link rel="stylesheet" href="css/fwslider.css" media="all">
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/fwslider.js"></script>
+<script src="js/menu_jquery.js"></script>
+<!--end slider -->
+</head>
+<body>
+    <form id="form1" runat="server">
+<!-- header_top -->
+<div class="top_bg">
+<div class="container">
+<div class="header_top">
+	<div class="top_left">
+		<%--<div style="margin-right:30px;float:left"><asp:Image ID="Image1" Height="40px" Width="200px" runat="server" ImageUrl="~/Home/images/Tops.jpg" /></div>--%>
+        <div style="float:left">
+            <p style="float:left;color:white" >T-</p><p style="float:left;color:white">Training</p><p style="float:left;margin-left:10px;color:white"> | </p>
+            <p style="float:left;margin-left:10px;color:white" >O-</p><p style="float:left;color:white">Outsourcing</p><p style="float:left;margin-left:10px;margin-right:10px;color:white"> | </p>
+            <p style="float:left;color:white" >P-</p><p style="float:left;color:white">Placements</p>
+        </div>
+	</div>
+	<div class="top_right">
+		    <p style="float:left;margin-right:10px"><a href="#"><asp:Label ID="Label1" color="White" runat="server" Text="Label"></asp:Label></a></p>
+            <p style="float:left"> | </p>
+		    <p style="float:left;margin-left:10px"><asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">LOGOUT</asp:LinkButton></p>
+	</div>
+	<div class="clearfix"> </div>
+</div>
+</div>
+</div>
+<!-- header -->
+<div class="header_bg">
+<div class="container">
+	<div class="header">
+		<div class="logo">
+			<a href="index.html"><img src="images/Tops1.jpg" alt=""/> </a>
+		</div>
+		<!-- start header_right -->
+		<div class="header_right">
+		<div class="create_btn">
+			<a class="arrow"  href="addemployee.aspx">create account <img src="images/right_arrow.png" alt=""/>  </a>
+		</div>
+		<div class="search">
+		    <form>
+		    	<input type="text" value="" placeholder="search employee..."/>
+				<input type="submit" value=""/>
+			</form>
+		</div>
+		<div class="clearfix"> </div>
+		</div></div>
+<div id='cssmenu'>
+<ul>
+   <li><a href="home.aspx" runat="server"><span>Home</span></a></li>
+    <li class='active has-sub'><a href='#'><span>Control Panel</span></a>
+      <ul>
+         <li class='has-sub'><a href='#'><span>Others</span></a>
+            <ul>
+               <li><a href="changepassword.aspx"><span>Change Password</span></a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+   <li class='active has-sub'><a href='#'><span>Human Resource</span></a>
+      <ul>
+         <li class='has-sub'><a href='#'><span>View</span></a>
+            <ul>
+               <li><a href="Viewprofile.aspx"><span>Employee Profile</span></a></li>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><span>Shift Planning</span></a>
+            <ul>
+               <li><a href="shiftchangerequest.aspx"><span>Shift Change Request</span></a></li>
+               <li class='last'><a href="manageshiftrequest.aspx"><span>Manage Shift Request</span></a></li>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><span>Manage Employee</span></a>
+            <ul>
+               <li><a href="addemployee.aspx"><span>Add Employee</span></a></li>
+                <li><a href="updateemployee.aspx"><span>Update Employee</span></a></li>
+               <li class='last'><a href="deleteemployee.aspx"><span>Delete Employee</span></a></li>
+            </ul>
+         </li>
+          <li class='has-sub'><a href='#'><span>Expenses & Claims</span></a>
+            <ul>
+               <li><a href="expenses.aspx"><span>Expenses</span></a></li>
+               <li class='last'><a href="advancerequisition.aspx"><span>Advance Requisition & Claims</span></a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+    <li class='active has-sub'><a href='#'><span>Payroll</span></a>
+      <ul>
+         <li class='has-sub'><a href='#'><span>Attendance</span></a>
+            <ul>
+               <li class='has-sub'><a href='#'><span>View</span></a>
+            <ul>
+               <li><a href="attendance.aspx"><span>Attendance</span></a></li>
+            </ul>
+               <li class='has-sub'><a href='#'><span>Manage</span></a>
+            <ul>
+               <li><a href="correctionrequest.aspx"><span>Correction Request</span></a></li>
+                <li><a href="regularisationrequest.aspx"><span>Regularisation Request</span></a></li>
+                <li class='last'><a href="dailyattendancerequest.aspx"><span>Daily Attendance Request</span></a></li>
+            </ul>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><span>Leave</span></a>
+            <ul>
+               <li><a href="leaveapplication.aspx"><span>Leave Application</span></a></li>
+                <li><a href="cancelleaverequest.aspx"><span>Cancel Leave Application</span></a></li>
+               <li class='last'><a href="manageleaveapplication.aspx"><span>Manage Leave Application</span></a></li>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><span>Salary Processing</span></a>
+            <ul>
+               <li class='last'><a href="viewpayroll.aspx"><span>View Payroll</span></a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+</ul>
+</div>
+<div style="width:1150px">
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+</div>
+</div></div>
+</form>
+</body>
+</html>
